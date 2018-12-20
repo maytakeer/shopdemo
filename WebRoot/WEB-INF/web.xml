@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>ShopWeb</display-name>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.woniuxy.shop.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>PictureCheckCodeServlet</servlet-name>
+  	<servlet-class>com.woniuxy.shop.servlet.PictureCheckCodeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RegisteredServlet</servlet-name>
+    <servlet-class>com.woniuxy.shop.servlet.RegisteredServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ChangePassServlet</servlet-name>
+    <servlet-class>com.woniuxy.shop.servlet.ChangePassServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowGoodsByPageServlet</servlet-name>
+    <servlet-class>com.woniuxy.shop.servlet.ShowGoodsByPageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>showGoodsInfoServlet</servlet-name>
+    <servlet-class>com.woniuxy.shop.servlet.showGoodsInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShoppingCartServlet</servlet-name>    
+    <servlet-class>com.woniuxy.shop.servlet.ShoppingCartServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowShoppingCartServlet</servlet-name>
+    <servlet-class>com.woniuxy.shop.servlet.ShowShoppingCartServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelectCartGoodsServlet</servlet-name>
+    <servlet-class>com.woniuxy.shop.servlet.DelectCartGoodsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>TestServlet</servlet-name>
+    <servlet-class>com.woniuxy.shop.servlet.TestServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelCartGoodsServlet</servlet-name>
+    <servlet-class>com.woniuxy.shop.servlet.DelCartGoodsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>InvoicingServlet</servlet-name>    
+    <servlet-class>com.woniuxy.shop.servlet.InvoicingServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowOrderServlet</servlet-name>   
+    <servlet-class>com.woniuxy.shop.servlet.ShowOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>TopServlet</servlet-name>   
+    <servlet-class>com.woniuxy.shop.servlet.TopServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddUserInfoServlet</servlet-name>    
+    <servlet-class>com.woniuxy.shop.servlet.AddUserInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowUserInfoServlet</servlet-name>    
+    <servlet-class>com.woniuxy.shop.servlet.ShowUserInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SendEmailServlet</servlet-name>    
+    <servlet-class>com.woniuxy.shop.servlet.SendEmailServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelUserInfoServlet</servlet-name>
+    
+    <servlet-class>com.woniuxy.shop.servlet.DelUserInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LogOutServlet</servlet-name>   
+    <servlet-class>com.woniuxy.shop.servlet.LogOutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MainServlet</servlet-name>
+    <servlet-class>com.sichuanligong.servlet.MainServlet</servlet-class>
+  </servlet>
+
+
+
+<filter>
+	<filter-name>PermissionFilter</filter-name>
+	<filter-class>com.woniuxy.shop.Filter.PermissionFilter</filter-class>
+</filter>
+
+
+<filter-mapping>
+	<filter-name>PermissionFilter</filter-name>
+	<url-pattern>/*</url-pattern>
+</filter-mapping>
+
+
+<listener>
+	<listener-class>com.woniuxy.shop.listener.ReplaceCheckListener</listener-class>
+</listener>
+
+
+
+
+
+
+
+
+
+  
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>PictureCheckCodeServlet</servlet-name>
+  	<url-pattern>/PictureCheckCodeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisteredServlet</servlet-name>
+    <url-pattern>/RegisteredServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangePassServlet</servlet-name>
+    <url-pattern>/ChangePassServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowGoodsByPageServlet</servlet-name>
+    <url-pattern>/ShowGoodsByPageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>showGoodsInfoServlet</servlet-name>
+    <url-pattern>/showGoodsInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShoppingCartServlet</servlet-name>
+    <url-pattern>/ShoppingCartServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowShoppingCartServlet</servlet-name>
+    <url-pattern>/ShowShoppingCartServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelectCartGoodsServlet</servlet-name>
+    <url-pattern>/DelectCartGoodsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>/TestServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelCartGoodsServlet</servlet-name>
+    <url-pattern>/DelCartGoodsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InvoicingServlet</servlet-name>
+    <url-pattern>/InvoicingServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowOrderServlet</servlet-name>
+    <url-pattern>/ShowOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TopServlet</servlet-name>
+    <url-pattern>/TopServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddUserInfoServlet</servlet-name>
+    <url-pattern>/AddUserInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowUserInfoServlet</servlet-name>
+    <url-pattern>/ShowUserInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SendEmailServlet</servlet-name>
+    <url-pattern>/SendEmailServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelUserInfoServlet</servlet-name>
+    <url-pattern>/DelUserInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogOutServlet</servlet-name>
+    <url-pattern>/LogOutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MainServlet</servlet-name>
+    <url-pattern>/MainServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
